@@ -15,6 +15,11 @@ export default defineConfig({
     tailwindcss(),
     cssInjectedByJsPlugin(),
   ],
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src/lib/main.ts"),
